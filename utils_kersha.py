@@ -32,6 +32,32 @@ has_international_clients: bool = True
 is_employee_active: bool = True
 is_vip_client: bool = False
 
+# Define a boolean variable
+is_sustainable_business: bool = True
+
+# Another integer variable
+number_of_certifications: int = 8
+
+# Another list of strings
+tools_used: list = ["SQL", "GitHub", "Python", "Docker", "AWS"]
+
+
+# Print additional variables to verify
+print(f"Sustainable Business: {is_sustainable_business}")
+print(f"Number of Certifications: {number_of_certifications}")
+print(f"Tools Used: {', '.join(tools_used)}")
+
+# Additional variables - revenue
+monthly_revenues: list = [15000, 18000, 17500, 16000, 20000, 19000]
+
+# Byline using f-string
+byline: str = f"""
+Over the past six months, my business has achieved an average monthly revenue of ${sum(monthly_revenues)/len(monthly_revenues):,.2f}.
+Our highest revenue month brought in ${max(monthly_revenues):,.2f}.
+"""
+print(byline)
+
+
 # declare an integer variable 
 # TODO: Add or replace this with your own integer variable
 years_in_operation: int = 12
@@ -43,8 +69,22 @@ average_client_satisfaction: float = 4.4
 # Import the statistics module for calculations
 import statistics
 # declare a list of strings
-# TODO: Add or replace this with your own list  
-skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence","Web Development","Data Science", "Cybersecurity", "Cloud Computing"  ]
+# TODO: Add or replace this with your own list 
+
+
+# Service detail variables
+name: str = "Kersha Broussard"
+operates_globally: bool = True
+skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence","Web Development","Data Science", "Cybersecurity", "Cloud Computing"]
+
+# Byline using f-string
+byline: str = f"""
+I'm {name}, and I {'' if operates_globally else 'do not '}offer services globally.
+My areas of expertise include:
+- {', '.join(skills_offered)}.
+"""
+print(byline)
+
 
 # declare a list of numbers so we can illustrate statistics skills
 # TODO: Add or replace this with your own numeric list  
