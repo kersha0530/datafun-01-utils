@@ -58,6 +58,23 @@ Our highest revenue month brought in ${max(monthly_revenues):,.2f}.
 print(byline)
 
 
+# Monthly revenue list
+monthly_revenues = [15000, 18000, 17500, 16000, 20000, 19000]
+
+# Calculate statistics
+min_revenue = min(monthly_revenues)  # Minimum revenue
+max_revenue = max(monthly_revenues)  # Maximum revenue
+mean_revenue = statistics.mean(monthly_revenues)  # Mean (average) revenue
+stdev_revenue = statistics.stdev(monthly_revenues)  # Standard deviation of revenue
+
+# Print results
+print("Monthly Revenue Analysis")
+print(f"Monthly Revenues: {monthly_revenues}")
+print(f"Minimum Revenue: ${min_revenue:,.2f}")
+print(f"Maximum Revenue: ${max_revenue:,.2f}")
+print(f"Mean Revenue: ${mean_revenue:,.2f}")
+print(f"Standard Deviation of Revenue: ${stdev_revenue:,.2f}")
+
 # declare an integer variable 
 # TODO: Add or replace this with your own integer variable
 years_in_operation: int = 12
@@ -101,6 +118,17 @@ stdev_score: float = statistics.stdev(client_satisfaction_scores)
 # Use a Python formatted string (f-string) to show information
 # TODO: Modify the text in the byline to fit your information
 # TODO: Modify the variables in the byline to use your variable names
+
+# Added monthly revenue list
+monthly_revenues = [15000, 18000, 17500, 16000, 20000, 19000]
+
+# Calculate statistics
+min_revenue = min(monthly_revenues)
+max_revenue = max(monthly_revenues)
+mean_revenue = statistics.mean(monthly_revenues)
+stdev_revenue = statistics.stdev(monthly_revenues)
+
+# Updated byline with monthly revenue analysis
 byline: str = f"""
 ---------------------------------------------------------
 Broussard Analytics: Delivering Professional Insights
@@ -116,6 +144,15 @@ Minimum Satisfaction Score:  {min_score}
 Maximum Satisfaction Score:  {max_score}
 Mean Satisfaction Score:     {mean_score:.2f}
 Standard Deviation of Scores: {stdev_score:.2f}
+
+---------------------------------------------------------
+Monthly Revenue Analysis
+---------------------------------------------------------
+Monthly Revenues:           {monthly_revenues}
+Minimum Revenue:            ${min_revenue:,.2f}
+Maximum Revenue:            ${max_revenue:,.2f}
+Mean Revenue:               ${mean_revenue:,.2f}
+Standard Deviation:         ${stdev_revenue:,.2f}
 """
 
 # Print the byline
