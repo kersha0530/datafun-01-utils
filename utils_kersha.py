@@ -1,5 +1,5 @@
 """
-Module: utils_case
+Module: utils_kersha
 
 Purpose: Reusable Module for My Analytics Projects
 
@@ -7,7 +7,7 @@ Description: This module provides a byline for my analytics projects.
 When we work hard to write useful code, we want it to be reusable.
 A good byline could be used in every Python analytics project we do.
 
-Author: Denise Case
+Author: Kersha Broussard
 
 TODO: Change the module name in this opening docstring
 TODO: Change the author in this opening docstring
@@ -28,23 +28,28 @@ import statistics  # provides mean(), stdev() and more....
 
 # declare a boolean variable (has a value True or False)
 # TODO: Add another or replace this with your own boolean variable
-has_international_clients: bool = True
+has_international_clients: bool = True 
+is_employee_active: bool = True
+is_vip_client: bool = False
 
 # declare an integer variable 
 # TODO: Add or replace this with your own integer variable
-years_in_operation: int = 10
+years_in_operation: int = 12
 
 # declare a floating point variable
 # TODO: Add or replace this with your own floating point variable
-average_client_satisfaction: float = 4.7
+average_client_satisfaction: float = 4.4
 
+# Import the statistics module for calculations
+import statistics
 # declare a list of strings
 # TODO: Add or replace this with your own list  
-skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence","Web Development","Data Science", "Cybersecurity", "Cloud Computing"  ]
 
 # declare a list of numbers so we can illustrate statistics skills
 # TODO: Add or replace this with your own numeric list  
-client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7, 4.5, 4.9]
+
 
 # Calculate basic statistics using built-in Python functions and the statistics module
 # TODO: Replace these variable names with the variable name of your own numeric list
@@ -58,17 +63,23 @@ stdev_score: float = statistics.stdev(client_satisfaction_scores)
 # TODO: Modify the variables in the byline to use your variable names
 byline: str = f"""
 ---------------------------------------------------------
-Stellar Analytics: Delivering Professional Insights
+Broussard Analytics: Delivering Professional Insights
 ---------------------------------------------------------
 Has International Clients:  {has_international_clients}
-Years in Operation:         {years_in_operation}
-Skills Offered:             {skills_offered}
-Client Satisfaction Scores: {client_satisfaction_scores}
-Minimum Satisfaction Score: {min_score}
-Maximum Satisfaction Score: {max_score}
-Mean Satisfaction Score: {mean_score:.2f}
-Standard Deviation of Satisfaction Scores: {stdev_score:.2f}
+Is Employee Active:          {is_employee_active}
+Is VIP Client:               {is_vip_client}
+Years in Operation:          {years_in_operation}
+Average Client Satisfaction: {average_client_satisfaction:.2f}
+Skills Offered:              {", ".join(skills_offered)}
+Client Satisfaction Scores:  {client_satisfaction_scores}
+Minimum Satisfaction Score:  {min_score}
+Maximum Satisfaction Score:  {max_score}
+Mean Satisfaction Score:     {mean_score:.2f}
+Standard Deviation of Scores: {stdev_score:.2f}
 """
+
+# Print the byline
+print(byline)
 
 #####################################
 # Define global functions (resuable instructions)
